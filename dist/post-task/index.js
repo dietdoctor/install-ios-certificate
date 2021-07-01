@@ -512,9 +512,9 @@ function getP12Properties(p12Path, p12Pwd) {
                 else if (key === "subject") {
                     // Example value: "/UID=E848ASUQZY/CN=iPhone Developer: Chris Sidi (7RZ3N927YF)/OU=DJ8T2973U7/O=Chris Sidi/C=US"
                     // Extract the common name.
-                    const matches = value.match(/\/CN=([^/]+)/);
-                    if (matches && matches[1]) {
-                        commonName = matches[1].trim();
+                    const matches = value.split(",")[1];
+                    if (matches) {
+                        commonName = matches.split("=")[1].trim();
                     }
                 }
                 else if (key === "notBefore") {
