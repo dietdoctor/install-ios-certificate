@@ -18,7 +18,7 @@ inputs:
     description: 'Required when using default or custom keychain.'
     required: false
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/task/index.js'
   post: 'dist/post-task/index.js'
   post-if: 'success()'
