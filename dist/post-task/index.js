@@ -537,6 +537,7 @@ function getP12Properties(p12Path, p12Pwd) {
             "-nokeys",
             "-passin",
             "pass:" + p12Pwd,
+            "-legacy",
         ]);
         const opensslopts = {};
         opensslopts.listeners = {
@@ -605,6 +606,7 @@ function getP12PrivateKeyName(p12Path, p12Pwd) {
             "pass:" + p12Pwd,
             "-passout",
             "pass:" + privateKeyPassword,
+            "-legacy",
         ]);
         const grepOpts = {};
         grepOpts.listeners = {
