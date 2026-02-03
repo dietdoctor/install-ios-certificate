@@ -539,7 +539,6 @@ export async function getP12Properties(
     "-nokeys",
     "-passin",
     "pass:" + p12Pwd,
-    "-legacy",
   ]);
 
   const opensslopts: execint.ExecOptions = {};
@@ -618,7 +617,6 @@ export async function getP12PrivateKeyName(
     "pass:" + p12Pwd,
     "-passout",
     "pass:" + privateKeyPassword,
-    "-legacy",
   ]);
 
   const grepOpts: execint.ExecOptions = {};
